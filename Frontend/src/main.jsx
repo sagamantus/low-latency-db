@@ -2,6 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Home from './screens/Home';
 import Try from './screens/Try'
+import Fetch from './screens/Fetch';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/try/",
     element: <Try/>,
+  },
+  {
+    path: "/fetch/",
+    element: <Fetch/>,
   },
 ]);
 
