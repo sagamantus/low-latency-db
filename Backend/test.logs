@@ -1,0 +1,580 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.0, pytest-8.3.3, pluggy-1.5.0
+rootdir: E:\low-latency-db\Backend
+plugins: anyio-4.6.2.post1, asyncio-0.24.0
+asyncio: mode=Mode.STRICT, default_loop_scope=None
+collected 8 items
+
+test/test_main.py::test_signup_and_email_confirmation 
+Setting up before tests...
+FAILED
+test/test_main.py::test_login_and_protected_route FAILED
+test/test_main.py::test_create_user_table FAILED
+test/test_main.py::test_write_data PASSED
+test/test_main.py::test_log_not_found PASSED
+test/test_main.py::test_write_invalid_data PASSED
+test/test_main.py::test_duplicate_entry PASSED
+test/test_main.py::test_generator 
+Test case 0 PASSED: Verified data for 2024-10-09 14:30:00+05:30
+Test case 1 PASSED: Verified data for 2024-10-09 14:31:00+05:30
+Test case 2 PASSED: Verified data for 2024-10-09 14:32:00+05:30
+Test case 3 PASSED: Verified data for 2024-10-09 14:33:00+05:30
+Test case 4 PASSED: Verified data for 2024-10-09 14:34:00+05:30
+Test case 5 PASSED: Verified data for 2024-10-09 14:35:00+05:30
+Test case 6 PASSED: Verified data for 2024-10-09 14:36:00+05:30
+Test case 7 PASSED: Verified data for 2024-10-09 14:37:00+05:30
+Test case 8 PASSED: Verified data for 2024-10-09 14:38:00+05:30
+Test case 9 PASSED: Verified data for 2024-10-09 14:39:00+05:30
+Test case 10 PASSED: Verified data for 2024-10-09 14:40:00+05:30
+Test case 11 PASSED: Verified data for 2024-10-09 14:41:00+05:30
+Test case 12 PASSED: Verified data for 2024-10-09 14:42:00+05:30
+Test case 13 PASSED: Verified data for 2024-10-09 14:43:00+05:30
+Test case 14 PASSED: Verified data for 2024-10-09 14:44:00+05:30
+Test case 15 PASSED: Verified data for 2024-10-09 14:45:00+05:30
+Test case 16 PASSED: Verified data for 2024-10-09 14:46:00+05:30
+Test case 17 PASSED: Verified data for 2024-10-09 14:47:00+05:30
+Test case 18 PASSED: Verified data for 2024-10-09 14:48:00+05:30
+Test case 19 PASSED: Verified data for 2024-10-09 14:49:00+05:30
+Test case 20 PASSED: Verified data for 2024-10-09 14:50:00+05:30
+Test case 21 PASSED: Verified data for 2024-10-09 14:51:00+05:30
+Test case 22 PASSED: Verified data for 2024-10-09 14:52:00+05:30
+Test case 23 PASSED: Verified data for 2024-10-09 14:53:00+05:30
+Test case 24 PASSED: Verified data for 2024-10-09 14:54:00+05:30
+Test case 25 PASSED: Verified data for 2024-10-09 14:55:00+05:30
+Test case 26 PASSED: Verified data for 2024-10-09 14:56:00+05:30
+Test case 27 PASSED: Verified data for 2024-10-09 14:57:00+05:30
+Test case 28 PASSED: Verified data for 2024-10-09 14:58:00+05:30
+Test case 29 PASSED: Verified data for 2024-10-09 14:59:00+05:30
+Test case 30 PASSED: Verified data for 2024-10-09 15:00:00+05:30
+Test case 31 PASSED: Verified data for 2024-10-09 15:01:00+05:30
+Test case 32 PASSED: Verified data for 2024-10-09 15:02:00+05:30
+Test case 33 PASSED: Verified data for 2024-10-09 15:03:00+05:30
+Test case 34 PASSED: Verified data for 2024-10-09 15:04:00+05:30
+Test case 35 PASSED: Verified data for 2024-10-09 15:05:00+05:30
+Test case 36 PASSED: Verified data for 2024-10-09 15:06:00+05:30
+Test case 37 PASSED: Verified data for 2024-10-09 15:07:00+05:30
+Test case 38 PASSED: Verified data for 2024-10-09 15:08:00+05:30
+Test case 39 PASSED: Verified data for 2024-10-09 15:09:00+05:30
+Test case 40 PASSED: Verified data for 2024-10-09 15:10:00+05:30
+Test case 41 PASSED: Verified data for 2024-10-09 15:11:00+05:30
+Test case 42 PASSED: Verified data for 2024-10-09 15:12:00+05:30
+Test case 43 PASSED: Verified data for 2024-10-09 15:13:00+05:30
+Test case 44 PASSED: Verified data for 2024-10-09 15:14:00+05:30
+Test case 45 PASSED: Verified data for 2024-10-09 15:15:00+05:30
+Test case 46 PASSED: Verified data for 2024-10-09 15:16:00+05:30
+Test case 47 PASSED: Verified data for 2024-10-09 15:17:00+05:30
+Test case 48 PASSED: Verified data for 2024-10-09 15:18:00+05:30
+Test case 49 PASSED: Verified data for 2024-10-09 15:19:00+05:30
+Test case 50 PASSED: Verified data for 2024-10-09 15:20:00+05:30
+Test case 51 PASSED: Verified data for 2024-10-09 15:21:00+05:30
+Test case 52 PASSED: Verified data for 2024-10-09 15:22:00+05:30
+Test case 53 PASSED: Verified data for 2024-10-09 15:23:00+05:30
+Test case 54 PASSED: Verified data for 2024-10-09 15:24:00+05:30
+Test case 55 PASSED: Verified data for 2024-10-09 15:25:00+05:30
+Test case 56 PASSED: Verified data for 2024-10-09 15:26:00+05:30
+Test case 57 PASSED: Verified data for 2024-10-09 15:27:00+05:30
+Test case 58 PASSED: Verified data for 2024-10-09 15:28:00+05:30
+Test case 59 PASSED: Verified data for 2024-10-09 15:29:00+05:30
+Test case 60 PASSED: Verified data for 2024-10-10 09:15:00+05:30
+Test case 61 PASSED: Verified data for 2024-10-10 09:16:00+05:30
+Test case 62 PASSED: Verified data for 2024-10-10 09:17:00+05:30
+Test case 63 PASSED: Verified data for 2024-10-10 09:18:00+05:30
+Test case 64 PASSED: Verified data for 2024-10-10 09:19:00+05:30
+Test case 65 PASSED: Verified data for 2024-10-10 09:20:00+05:30
+Test case 66 PASSED: Verified data for 2024-10-10 09:21:00+05:30
+Test case 67 PASSED: Verified data for 2024-10-10 09:22:00+05:30
+Test case 68 PASSED: Verified data for 2024-10-10 09:23:00+05:30
+Test case 69 PASSED: Verified data for 2024-10-10 09:24:00+05:30
+Test case 70 PASSED: Verified data for 2024-10-10 09:25:00+05:30
+Test case 71 PASSED: Verified data for 2024-10-10 09:26:00+05:30
+Test case 72 PASSED: Verified data for 2024-10-10 09:27:00+05:30
+Test case 73 PASSED: Verified data for 2024-10-10 09:28:00+05:30
+Test case 74 PASSED: Verified data for 2024-10-10 09:29:00+05:30
+Test case 75 PASSED: Verified data for 2024-10-10 09:30:00+05:30
+Test case 76 PASSED: Verified data for 2024-10-10 09:31:00+05:30
+Test case 77 PASSED: Verified data for 2024-10-10 09:32:00+05:30
+Test case 78 PASSED: Verified data for 2024-10-10 09:33:00+05:30
+Test case 79 PASSED: Verified data for 2024-10-10 09:34:00+05:30
+Test case 80 PASSED: Verified data for 2024-10-10 09:35:00+05:30
+Test case 81 PASSED: Verified data for 2024-10-10 09:36:00+05:30
+Test case 82 PASSED: Verified data for 2024-10-10 09:37:00+05:30
+Test case 83 PASSED: Verified data for 2024-10-10 09:38:00+05:30
+Test case 84 PASSED: Verified data for 2024-10-10 09:39:00+05:30
+Test case 85 PASSED: Verified data for 2024-10-10 09:40:00+05:30
+Test case 86 PASSED: Verified data for 2024-10-10 09:41:00+05:30
+Test case 87 PASSED: Verified data for 2024-10-10 09:42:00+05:30
+Test case 88 PASSED: Verified data for 2024-10-10 09:43:00+05:30
+Test case 89 PASSED: Verified data for 2024-10-10 09:44:00+05:30
+Test case 90 PASSED: Verified data for 2024-10-10 09:45:00+05:30
+Test case 91 PASSED: Verified data for 2024-10-10 09:46:00+05:30
+Test case 92 PASSED: Verified data for 2024-10-10 09:47:00+05:30
+Test case 93 PASSED: Verified data for 2024-10-10 09:48:00+05:30
+Test case 94 PASSED: Verified data for 2024-10-10 09:49:00+05:30
+Test case 95 PASSED: Verified data for 2024-10-10 09:50:00+05:30
+Test case 96 PASSED: Verified data for 2024-10-10 09:51:00+05:30
+Test case 97 PASSED: Verified data for 2024-10-10 09:52:00+05:30
+Test case 98 PASSED: Verified data for 2024-10-10 09:53:00+05:30
+Test case 99 PASSED: Verified data for 2024-10-10 09:54:00+05:30
+Test case 100 PASSED: Verified data for 2024-10-10 09:55:00+05:30
+Test case 101 PASSED: Verified data for 2024-10-10 09:56:00+05:30
+Test case 102 PASSED: Verified data for 2024-10-10 09:57:00+05:30
+Test case 103 PASSED: Verified data for 2024-10-10 09:58:00+05:30
+Test case 104 PASSED: Verified data for 2024-10-10 09:59:00+05:30
+Test case 105 PASSED: Verified data for 2024-10-10 10:00:00+05:30
+Test case 106 PASSED: Verified data for 2024-10-10 10:01:00+05:30
+Test case 107 PASSED: Verified data for 2024-10-10 10:02:00+05:30
+Test case 108 PASSED: Verified data for 2024-10-10 10:03:00+05:30
+Test case 109 PASSED: Verified data for 2024-10-10 10:04:00+05:30
+Test case 110 PASSED: Verified data for 2024-10-10 10:05:00+05:30
+Test case 111 PASSED: Verified data for 2024-10-10 10:06:00+05:30
+Test case 112 PASSED: Verified data for 2024-10-10 10:07:00+05:30
+Test case 113 PASSED: Verified data for 2024-10-10 10:08:00+05:30
+Test case 114 PASSED: Verified data for 2024-10-10 10:09:00+05:30
+Test case 115 PASSED: Verified data for 2024-10-10 10:10:00+05:30
+Test case 116 PASSED: Verified data for 2024-10-10 10:11:00+05:30
+Test case 117 PASSED: Verified data for 2024-10-10 10:12:00+05:30
+Test case 118 PASSED: Verified data for 2024-10-10 10:13:00+05:30
+Test case 119 PASSED: Verified data for 2024-10-10 10:14:00+05:30
+Test case 120 PASSED: Verified data for 2024-10-10 10:15:00+05:30
+Test case 121 PASSED: Verified data for 2024-10-10 10:16:00+05:30
+Test case 122 PASSED: Verified data for 2024-10-10 10:17:00+05:30
+Test case 123 PASSED: Verified data for 2024-10-10 10:18:00+05:30
+Test case 124 PASSED: Verified data for 2024-10-10 10:19:00+05:30
+Test case 125 PASSED: Verified data for 2024-10-10 10:20:00+05:30
+Test case 126 PASSED: Verified data for 2024-10-10 10:21:00+05:30
+Test case 127 PASSED: Verified data for 2024-10-10 10:22:00+05:30
+Test case 128 PASSED: Verified data for 2024-10-10 10:23:00+05:30
+Test case 129 PASSED: Verified data for 2024-10-10 10:24:00+05:30
+Test case 130 PASSED: Verified data for 2024-10-10 10:25:00+05:30
+Test case 131 PASSED: Verified data for 2024-10-10 10:26:00+05:30
+Test case 132 PASSED: Verified data for 2024-10-10 10:27:00+05:30
+Test case 133 PASSED: Verified data for 2024-10-10 10:28:00+05:30
+Test case 134 PASSED: Verified data for 2024-10-10 10:29:00+05:30
+Test case 135 PASSED: Verified data for 2024-10-10 10:30:00+05:30
+Test case 136 PASSED: Verified data for 2024-10-10 10:31:00+05:30
+Test case 137 PASSED: Verified data for 2024-10-10 10:32:00+05:30
+Test case 138 PASSED: Verified data for 2024-10-10 10:33:00+05:30
+Test case 139 PASSED: Verified data for 2024-10-10 10:34:00+05:30
+Test case 140 PASSED: Verified data for 2024-10-10 10:35:00+05:30
+Test case 141 PASSED: Verified data for 2024-10-10 10:36:00+05:30
+Test case 142 PASSED: Verified data for 2024-10-10 10:37:00+05:30
+Test case 143 PASSED: Verified data for 2024-10-10 10:38:00+05:30
+Test case 144 PASSED: Verified data for 2024-10-10 10:39:00+05:30
+Test case 145 PASSED: Verified data for 2024-10-10 10:40:00+05:30
+Test case 146 PASSED: Verified data for 2024-10-10 10:41:00+05:30
+Test case 147 PASSED: Verified data for 2024-10-10 10:42:00+05:30
+Test case 148 PASSED: Verified data for 2024-10-10 10:43:00+05:30
+Test case 149 PASSED: Verified data for 2024-10-10 10:44:00+05:30
+Test case 150 PASSED: Verified data for 2024-10-10 10:45:00+05:30
+Test case 151 PASSED: Verified data for 2024-10-10 10:46:00+05:30
+Test case 152 PASSED: Verified data for 2024-10-10 10:47:00+05:30
+Test case 153 PASSED: Verified data for 2024-10-10 10:48:00+05:30
+Test case 154 PASSED: Verified data for 2024-10-10 10:49:00+05:30
+Test case 155 PASSED: Verified data for 2024-10-10 10:50:00+05:30
+Test case 156 PASSED: Verified data for 2024-10-10 10:51:00+05:30
+Test case 157 PASSED: Verified data for 2024-10-10 10:52:00+05:30
+Test case 158 PASSED: Verified data for 2024-10-10 10:53:00+05:30
+Test case 159 PASSED: Verified data for 2024-10-10 10:54:00+05:30
+Test case 160 PASSED: Verified data for 2024-10-10 10:55:00+05:30
+Test case 161 PASSED: Verified data for 2024-10-10 10:56:00+05:30
+Test case 162 PASSED: Verified data for 2024-10-10 10:57:00+05:30
+Test case 163 PASSED: Verified data for 2024-10-10 10:58:00+05:30
+Test case 164 PASSED: Verified data for 2024-10-10 10:59:00+05:30
+Test case 165 PASSED: Verified data for 2024-10-10 11:00:00+05:30
+Test case 166 PASSED: Verified data for 2024-10-10 11:01:00+05:30
+Test case 167 PASSED: Verified data for 2024-10-10 11:02:00+05:30
+Test case 168 PASSED: Verified data for 2024-10-10 11:03:00+05:30
+Test case 169 PASSED: Verified data for 2024-10-10 11:04:00+05:30
+Test case 170 PASSED: Verified data for 2024-10-10 11:05:00+05:30
+Test case 171 PASSED: Verified data for 2024-10-10 11:06:00+05:30
+Test case 172 PASSED: Verified data for 2024-10-10 11:07:00+05:30
+Test case 173 PASSED: Verified data for 2024-10-10 11:08:00+05:30
+Test case 174 PASSED: Verified data for 2024-10-10 11:09:00+05:30
+Test case 175 PASSED: Verified data for 2024-10-10 11:10:00+05:30
+Test case 176 PASSED: Verified data for 2024-10-10 11:11:00+05:30
+Test case 177 PASSED: Verified data for 2024-10-10 11:12:00+05:30
+Test case 178 PASSED: Verified data for 2024-10-10 11:13:00+05:30
+Test case 179 PASSED: Verified data for 2024-10-10 11:14:00+05:30
+Test case 180 PASSED: Verified data for 2024-10-10 11:15:00+05:30
+Test case 181 PASSED: Verified data for 2024-10-10 11:16:00+05:30
+Test case 182 PASSED: Verified data for 2024-10-10 11:17:00+05:30
+Test case 183 PASSED: Verified data for 2024-10-10 11:18:00+05:30
+Test case 184 PASSED: Verified data for 2024-10-10 11:19:00+05:30
+Test case 185 PASSED: Verified data for 2024-10-10 11:20:00+05:30
+Test case 186 PASSED: Verified data for 2024-10-10 11:21:00+05:30
+Test case 187 PASSED: Verified data for 2024-10-10 11:22:00+05:30
+Test case 188 PASSED: Verified data for 2024-10-10 11:23:00+05:30
+Test case 189 PASSED: Verified data for 2024-10-10 11:24:00+05:30
+Test case 190 PASSED: Verified data for 2024-10-10 11:25:00+05:30
+Test case 191 PASSED: Verified data for 2024-10-10 11:26:00+05:30
+Test case 192 PASSED: Verified data for 2024-10-10 11:27:00+05:30
+Test case 193 PASSED: Verified data for 2024-10-10 11:28:00+05:30
+Test case 194 PASSED: Verified data for 2024-10-10 11:29:00+05:30
+Test case 195 PASSED: Verified data for 2024-10-10 11:30:00+05:30
+Test case 196 PASSED: Verified data for 2024-10-10 11:31:00+05:30
+Test case 197 PASSED: Verified data for 2024-10-10 11:32:00+05:30
+Test case 198 PASSED: Verified data for 2024-10-10 11:33:00+05:30
+Test case 199 PASSED: Verified data for 2024-10-10 11:34:00+05:30
+Test case 200 PASSED: Verified data for 2024-10-10 11:35:00+05:30
+Test case 201 PASSED: Verified data for 2024-10-10 11:36:00+05:30
+Test case 202 PASSED: Verified data for 2024-10-10 11:37:00+05:30
+Test case 203 PASSED: Verified data for 2024-10-10 11:38:00+05:30
+Test case 204 PASSED: Verified data for 2024-10-10 11:39:00+05:30
+Test case 205 PASSED: Verified data for 2024-10-10 11:40:00+05:30
+Test case 206 PASSED: Verified data for 2024-10-10 11:41:00+05:30
+Test case 207 PASSED: Verified data for 2024-10-10 11:42:00+05:30
+Test case 208 PASSED: Verified data for 2024-10-10 11:43:00+05:30
+Test case 209 PASSED: Verified data for 2024-10-10 11:44:00+05:30
+Test case 210 PASSED: Verified data for 2024-10-10 11:45:00+05:30
+Test case 211 PASSED: Verified data for 2024-10-10 11:46:00+05:30
+Test case 212 PASSED: Verified data for 2024-10-10 11:47:00+05:30
+Test case 213 PASSED: Verified data for 2024-10-10 11:48:00+05:30
+Test case 214 PASSED: Verified data for 2024-10-10 11:49:00+05:30
+Test case 215 PASSED: Verified data for 2024-10-10 11:50:00+05:30
+Test case 216 PASSED: Verified data for 2024-10-10 11:51:00+05:30
+Test case 217 PASSED: Verified data for 2024-10-10 11:52:00+05:30
+Test case 218 PASSED: Verified data for 2024-10-10 11:53:00+05:30
+Test case 219 PASSED: Verified data for 2024-10-10 11:54:00+05:30
+Test case 220 PASSED: Verified data for 2024-10-10 11:55:00+05:30
+Test case 221 PASSED: Verified data for 2024-10-10 11:56:00+05:30
+Test case 222 PASSED: Verified data for 2024-10-10 11:57:00+05:30
+Test case 223 PASSED: Verified data for 2024-10-10 11:58:00+05:30
+Test case 224 PASSED: Verified data for 2024-10-10 11:59:00+05:30
+Test case 225 PASSED: Verified data for 2024-10-10 12:00:00+05:30
+Test case 226 PASSED: Verified data for 2024-10-10 12:01:00+05:30
+Test case 227 PASSED: Verified data for 2024-10-10 12:02:00+05:30
+Test case 228 PASSED: Verified data for 2024-10-10 12:03:00+05:30
+Test case 229 PASSED: Verified data for 2024-10-10 12:04:00+05:30
+Test case 230 PASSED: Verified data for 2024-10-10 12:05:00+05:30
+Test case 231 PASSED: Verified data for 2024-10-10 12:06:00+05:30
+Test case 232 PASSED: Verified data for 2024-10-10 12:07:00+05:30
+Test case 233 PASSED: Verified data for 2024-10-10 12:08:00+05:30
+Test case 234 PASSED: Verified data for 2024-10-10 12:09:00+05:30
+Test case 235 PASSED: Verified data for 2024-10-10 12:10:00+05:30
+Test case 236 PASSED: Verified data for 2024-10-10 12:11:00+05:30
+Test case 237 PASSED: Verified data for 2024-10-10 12:12:00+05:30
+Test case 238 PASSED: Verified data for 2024-10-10 12:13:00+05:30
+Test case 239 PASSED: Verified data for 2024-10-10 12:14:00+05:30
+Test case 240 PASSED: Verified data for 2024-10-10 12:15:00+05:30
+Test case 241 PASSED: Verified data for 2024-10-10 12:16:00+05:30
+Test case 242 PASSED: Verified data for 2024-10-10 12:17:00+05:30
+Test case 243 PASSED: Verified data for 2024-10-10 12:18:00+05:30
+Test case 244 PASSED: Verified data for 2024-10-10 12:19:00+05:30
+Test case 245 PASSED: Verified data for 2024-10-10 12:20:00+05:30
+Test case 246 PASSED: Verified data for 2024-10-10 12:21:00+05:30
+Test case 247 PASSED: Verified data for 2024-10-10 12:22:00+05:30
+Test case 248 PASSED: Verified data for 2024-10-10 12:23:00+05:30
+Test case 249 PASSED: Verified data for 2024-10-10 12:24:00+05:30
+Test case 250 PASSED: Verified data for 2024-10-10 12:25:00+05:30
+Test case 251 PASSED: Verified data for 2024-10-10 12:26:00+05:30
+Test case 252 PASSED: Verified data for 2024-10-10 12:27:00+05:30
+Test case 253 PASSED: Verified data for 2024-10-10 12:28:00+05:30
+Test case 254 PASSED: Verified data for 2024-10-10 12:29:00+05:30
+Test case 255 PASSED: Verified data for 2024-10-10 12:30:00+05:30
+Test case 256 PASSED: Verified data for 2024-10-10 12:31:00+05:30
+Test case 257 PASSED: Verified data for 2024-10-10 12:32:00+05:30
+Test case 258 PASSED: Verified data for 2024-10-10 12:33:00+05:30
+Test case 259 PASSED: Verified data for 2024-10-10 12:34:00+05:30
+Test case 260 PASSED: Verified data for 2024-10-10 12:35:00+05:30
+Test case 261 PASSED: Verified data for 2024-10-10 12:36:00+05:30
+Test case 262 PASSED: Verified data for 2024-10-10 12:37:00+05:30
+Test case 263 PASSED: Verified data for 2024-10-10 12:38:00+05:30
+Test case 264 PASSED: Verified data for 2024-10-10 12:39:00+05:30
+Test case 265 PASSED: Verified data for 2024-10-10 12:40:00+05:30
+Test case 266 PASSED: Verified data for 2024-10-10 12:41:00+05:30
+Test case 267 PASSED: Verified data for 2024-10-10 12:42:00+05:30
+Test case 268 PASSED: Verified data for 2024-10-10 12:43:00+05:30
+Test case 269 PASSED: Verified data for 2024-10-10 12:44:00+05:30
+Test case 270 PASSED: Verified data for 2024-10-10 12:45:00+05:30
+Test case 271 PASSED: Verified data for 2024-10-10 12:46:00+05:30
+Test case 272 PASSED: Verified data for 2024-10-10 12:47:00+05:30
+Test case 273 PASSED: Verified data for 2024-10-10 12:48:00+05:30
+Test case 274 PASSED: Verified data for 2024-10-10 12:49:00+05:30
+Test case 275 PASSED: Verified data for 2024-10-10 12:50:00+05:30
+Test case 276 PASSED: Verified data for 2024-10-10 12:51:00+05:30
+Test case 277 PASSED: Verified data for 2024-10-10 12:52:00+05:30
+Test case 278 PASSED: Verified data for 2024-10-10 12:53:00+05:30
+Test case 279 PASSED: Verified data for 2024-10-10 12:54:00+05:30
+Test case 280 PASSED: Verified data for 2024-10-10 12:55:00+05:30
+Test case 281 PASSED: Verified data for 2024-10-10 12:56:00+05:30
+Test case 282 PASSED: Verified data for 2024-10-10 12:57:00+05:30
+Test case 283 PASSED: Verified data for 2024-10-10 12:58:00+05:30
+Test case 284 PASSED: Verified data for 2024-10-10 12:59:00+05:30
+Test case 285 PASSED: Verified data for 2024-10-10 13:00:00+05:30
+Test case 286 PASSED: Verified data for 2024-10-10 13:01:00+05:30
+Test case 287 PASSED: Verified data for 2024-10-10 13:02:00+05:30
+Test case 288 PASSED: Verified data for 2024-10-10 13:03:00+05:30
+Test case 289 PASSED: Verified data for 2024-10-10 13:04:00+05:30
+Test case 290 PASSED: Verified data for 2024-10-10 13:05:00+05:30
+Test case 291 PASSED: Verified data for 2024-10-10 13:06:00+05:30
+Test case 292 PASSED: Verified data for 2024-10-10 13:07:00+05:30
+Test case 293 PASSED: Verified data for 2024-10-10 13:08:00+05:30
+Test case 294 PASSED: Verified data for 2024-10-10 13:09:00+05:30
+Test case 295 PASSED: Verified data for 2024-10-10 13:10:00+05:30
+Test case 296 PASSED: Verified data for 2024-10-10 13:11:00+05:30
+Test case 297 PASSED: Verified data for 2024-10-10 13:12:00+05:30
+Test case 298 PASSED: Verified data for 2024-10-10 13:13:00+05:30
+Test case 299 PASSED: Verified data for 2024-10-10 13:14:00+05:30
+Test case 300 PASSED: Verified data for 2024-10-10 13:15:00+05:30
+Test case 301 PASSED: Verified data for 2024-10-10 13:16:00+05:30
+Test case 302 PASSED: Verified data for 2024-10-10 13:17:00+05:30
+Test case 303 PASSED: Verified data for 2024-10-10 13:18:00+05:30
+Test case 304 PASSED: Verified data for 2024-10-10 13:19:00+05:30
+Test case 305 PASSED: Verified data for 2024-10-10 13:20:00+05:30
+Test case 306 PASSED: Verified data for 2024-10-10 13:21:00+05:30
+Test case 307 PASSED: Verified data for 2024-10-10 13:22:00+05:30
+Test case 308 PASSED: Verified data for 2024-10-10 13:23:00+05:30
+Test case 309 PASSED: Verified data for 2024-10-10 13:24:00+05:30
+Test case 310 PASSED: Verified data for 2024-10-10 13:25:00+05:30
+Test case 311 PASSED: Verified data for 2024-10-10 13:26:00+05:30
+Test case 312 PASSED: Verified data for 2024-10-10 13:27:00+05:30
+Test case 313 PASSED: Verified data for 2024-10-10 13:28:00+05:30
+Test case 314 PASSED: Verified data for 2024-10-10 13:29:00+05:30
+Test case 315 PASSED: Verified data for 2024-10-10 13:30:00+05:30
+Test case 316 PASSED: Verified data for 2024-10-10 13:31:00+05:30
+Test case 317 PASSED: Verified data for 2024-10-10 13:32:00+05:30
+Test case 318 PASSED: Verified data for 2024-10-10 13:33:00+05:30
+Test case 319 PASSED: Verified data for 2024-10-10 13:34:00+05:30
+Test case 320 PASSED: Verified data for 2024-10-10 13:35:00+05:30
+Test case 321 PASSED: Verified data for 2024-10-10 13:36:00+05:30
+Test case 322 PASSED: Verified data for 2024-10-10 13:37:00+05:30
+Test case 323 PASSED: Verified data for 2024-10-10 13:38:00+05:30
+Test case 324 PASSED: Verified data for 2024-10-10 13:39:00+05:30
+Test case 325 PASSED: Verified data for 2024-10-10 13:40:00+05:30
+Test case 326 PASSED: Verified data for 2024-10-10 13:41:00+05:30
+Test case 327 PASSED: Verified data for 2024-10-10 13:42:00+05:30
+Test case 328 PASSED: Verified data for 2024-10-10 13:43:00+05:30
+Test case 329 PASSED: Verified data for 2024-10-10 13:44:00+05:30
+Test case 330 PASSED: Verified data for 2024-10-10 13:45:00+05:30
+Test case 331 PASSED: Verified data for 2024-10-10 13:46:00+05:30
+Test case 332 PASSED: Verified data for 2024-10-10 13:47:00+05:30
+Test case 333 PASSED: Verified data for 2024-10-10 13:48:00+05:30
+Test case 334 PASSED: Verified data for 2024-10-10 13:49:00+05:30
+Test case 335 PASSED: Verified data for 2024-10-10 13:50:00+05:30
+Test case 336 PASSED: Verified data for 2024-10-10 13:51:00+05:30
+Test case 337 PASSED: Verified data for 2024-10-10 13:52:00+05:30
+Test case 338 PASSED: Verified data for 2024-10-10 13:53:00+05:30
+Test case 339 PASSED: Verified data for 2024-10-10 13:54:00+05:30
+Test case 340 PASSED: Verified data for 2024-10-10 13:55:00+05:30
+Test case 341 PASSED: Verified data for 2024-10-10 13:56:00+05:30
+Test case 342 PASSED: Verified data for 2024-10-10 13:57:00+05:30
+Test case 343 PASSED: Verified data for 2024-10-10 13:58:00+05:30
+Test case 344 PASSED: Verified data for 2024-10-10 13:59:00+05:30
+Test case 345 PASSED: Verified data for 2024-10-10 14:00:00+05:30
+Test case 346 PASSED: Verified data for 2024-10-10 14:01:00+05:30
+Test case 347 PASSED: Verified data for 2024-10-10 14:02:00+05:30
+Test case 348 PASSED: Verified data for 2024-10-10 14:03:00+05:30
+Test case 349 PASSED: Verified data for 2024-10-10 14:04:00+05:30
+Test case 350 PASSED: Verified data for 2024-10-10 14:05:00+05:30
+Test case 351 PASSED: Verified data for 2024-10-10 14:06:00+05:30
+Test case 352 PASSED: Verified data for 2024-10-10 14:07:00+05:30
+Test case 353 PASSED: Verified data for 2024-10-10 14:08:00+05:30
+Test case 354 PASSED: Verified data for 2024-10-10 14:09:00+05:30
+Test case 355 PASSED: Verified data for 2024-10-10 14:10:00+05:30
+Test case 356 PASSED: Verified data for 2024-10-10 14:11:00+05:30
+Test case 357 PASSED: Verified data for 2024-10-10 14:12:00+05:30
+Test case 358 PASSED: Verified data for 2024-10-10 14:13:00+05:30
+Test case 359 PASSED: Verified data for 2024-10-10 14:14:00+05:30
+Test case 360 PASSED: Verified data for 2024-10-10 14:15:00+05:30
+Test case 361 PASSED: Verified data for 2024-10-10 14:16:00+05:30
+Test case 362 PASSED: Verified data for 2024-10-10 14:17:00+05:30
+Test case 363 PASSED: Verified data for 2024-10-10 14:18:00+05:30
+Test case 364 PASSED: Verified data for 2024-10-10 14:19:00+05:30
+Test case 365 PASSED: Verified data for 2024-10-10 14:20:00+05:30
+Test case 366 PASSED: Verified data for 2024-10-10 14:21:00+05:30
+Test case 367 PASSED: Verified data for 2024-10-10 14:22:00+05:30
+Test case 368 PASSED: Verified data for 2024-10-10 14:23:00+05:30
+Test case 369 PASSED: Verified data for 2024-10-10 14:24:00+05:30
+Test case 370 PASSED: Verified data for 2024-10-10 14:25:00+05:30
+Test case 371 PASSED: Verified data for 2024-10-10 14:26:00+05:30
+Test case 372 PASSED: Verified data for 2024-10-10 14:27:00+05:30
+Test case 373 PASSED: Verified data for 2024-10-10 14:28:00+05:30
+Test case 374 PASSED: Verified data for 2024-10-10 14:29:00+05:30
+Test case 375 PASSED: Verified data for 2024-10-10 14:30:00+05:30
+Test case 376 PASSED: Verified data for 2024-10-10 14:31:00+05:30
+Test case 377 PASSED: Verified data for 2024-10-10 14:32:00+05:30
+Test case 378 PASSED: Verified data for 2024-10-10 14:33:00+05:30
+Test case 379 PASSED: Verified data for 2024-10-10 14:34:00+05:30
+Test case 380 PASSED: Verified data for 2024-10-10 14:35:00+05:30
+Test case 381 PASSED: Verified data for 2024-10-10 14:36:00+05:30
+Test case 382 PASSED: Verified data for 2024-10-10 14:37:00+05:30
+Test case 383 PASSED: Verified data for 2024-10-10 14:38:00+05:30
+Test case 384 PASSED: Verified data for 2024-10-10 14:39:00+05:30
+Test case 385 PASSED: Verified data for 2024-10-10 14:40:00+05:30
+Test case 386 PASSED: Verified data for 2024-10-10 14:41:00+05:30
+Test case 387 PASSED: Verified data for 2024-10-10 14:42:00+05:30
+Test case 388 PASSED: Verified data for 2024-10-10 14:43:00+05:30
+Test case 389 PASSED: Verified data for 2024-10-10 14:44:00+05:30
+Test case 390 PASSED: Verified data for 2024-10-10 14:45:00+05:30
+Test case 391 PASSED: Verified data for 2024-10-10 14:46:00+05:30
+Test case 392 PASSED: Verified data for 2024-10-10 14:47:00+05:30
+Test case 393 PASSED: Verified data for 2024-10-10 14:48:00+05:30
+Test case 394 PASSED: Verified data for 2024-10-10 14:49:00+05:30
+Test case 395 PASSED: Verified data for 2024-10-10 14:50:00+05:30
+Test case 396 PASSED: Verified data for 2024-10-10 14:51:00+05:30
+Test case 397 PASSED: Verified data for 2024-10-10 14:52:00+05:30
+Test case 398 PASSED: Verified data for 2024-10-10 14:53:00+05:30
+Test case 399 PASSED: Verified data for 2024-10-10 14:54:00+05:30
+Test case 400 PASSED: Verified data for 2024-10-10 14:55:00+05:30
+Test case 401 PASSED: Verified data for 2024-10-10 14:56:00+05:30
+Test case 402 PASSED: Verified data for 2024-10-10 14:57:00+05:30
+Test case 403 PASSED: Verified data for 2024-10-10 14:58:00+05:30
+Test case 404 PASSED: Verified data for 2024-10-10 14:59:00+05:30
+Test case 405 PASSED: Verified data for 2024-10-10 15:00:00+05:30
+Test case 406 PASSED: Verified data for 2024-10-10 15:01:00+05:30
+Test case 407 PASSED: Verified data for 2024-10-10 15:02:00+05:30
+Test case 408 PASSED: Verified data for 2024-10-10 15:03:00+05:30
+Test case 409 PASSED: Verified data for 2024-10-10 15:04:00+05:30
+Test case 410 PASSED: Verified data for 2024-10-10 15:05:00+05:30
+Test case 411 PASSED: Verified data for 2024-10-10 15:06:00+05:30
+Test case 412 PASSED: Verified data for 2024-10-10 15:07:00+05:30
+Test case 413 PASSED: Verified data for 2024-10-10 15:08:00+05:30
+Test case 414 PASSED: Verified data for 2024-10-10 15:09:00+05:30
+Test case 415 PASSED: Verified data for 2024-10-10 15:10:00+05:30
+Test case 416 PASSED: Verified data for 2024-10-10 15:11:00+05:30
+Test case 417 PASSED: Verified data for 2024-10-10 15:12:00+05:30
+Test case 418 PASSED: Verified data for 2024-10-10 15:13:00+05:30
+Test case 419 PASSED: Verified data for 2024-10-10 15:14:00+05:30
+Test case 420 PASSED: Verified data for 2024-10-10 15:15:00+05:30
+Test case 421 PASSED: Verified data for 2024-10-10 15:16:00+05:30
+Test case 422 PASSED: Verified data for 2024-10-10 15:17:00+05:30
+Test case 423 PASSED: Verified data for 2024-10-10 15:18:00+05:30
+Test case 424 PASSED: Verified data for 2024-10-10 15:19:00+05:30
+Test case 425 PASSED: Verified data for 2024-10-10 15:20:00+05:30
+Test case 426 PASSED: Verified data for 2024-10-10 15:21:00+05:30
+Test case 427 PASSED: Verified data for 2024-10-10 15:22:00+05:30
+Test case 428 PASSED: Verified data for 2024-10-10 15:23:00+05:30
+Test case 429 PASSED: Verified data for 2024-10-10 15:24:00+05:30
+Test case 430 PASSED: Verified data for 2024-10-10 15:25:00+05:30
+Test case 431 PASSED: Verified data for 2024-10-10 15:26:00+05:30
+Test case 432 PASSED: Verified data for 2024-10-10 15:27:00+05:30
+Test case 433 PASSED: Verified data for 2024-10-10 15:28:00+05:30
+Test case 434 PASSED: Verified data for 2024-10-10 15:29:00+05:30
+Test case 435 PASSED: Verified data for 2024-10-11 09:15:00+05:30
+Test case 436 PASSED: Verified data for 2024-10-11 09:16:00+05:30
+Test case 437 PASSED: Verified data for 2024-10-11 09:17:00+05:30
+Test case 438 PASSED: Verified data for 2024-10-11 09:18:00+05:30
+Test case 439 PASSED: Verified data for 2024-10-11 09:19:00+05:30
+Test case 440 PASSED: Verified data for 2024-10-11 09:20:00+05:30
+Test case 441 PASSED: Verified data for 2024-10-11 09:21:00+05:30
+Test case 442 PASSED: Verified data for 2024-10-11 09:22:00+05:30
+Test case 443 PASSED: Verified data for 2024-10-11 09:23:00+05:30
+Test case 444 PASSED: Verified data for 2024-10-11 09:24:00+05:30
+Test case 445 PASSED: Verified data for 2024-10-11 09:25:00+05:30
+Test case 446 PASSED: Verified data for 2024-10-11 09:26:00+05:30
+Test case 447 PASSED: Verified data for 2024-10-11 09:27:00+05:30
+Test case 448 PASSED: Verified data for 2024-10-11 09:28:00+05:30
+Test case 449 PASSED: Verified data for 2024-10-11 09:29:00+05:30
+Test case 450 PASSED: Verified data for 2024-10-11 09:30:00+05:30
+Test case 451 PASSED: Verified data for 2024-10-11 09:31:00+05:30
+Test case 452 PASSED: Verified data for 2024-10-11 09:32:00+05:30
+Test case 453 PASSED: Verified data for 2024-10-11 09:33:00+05:30
+Test case 454 PASSED: Verified data for 2024-10-11 09:34:00+05:30
+Test case 455 PASSED: Verified data for 2024-10-11 09:35:00+05:30
+Test case 456 PASSED: Verified data for 2024-10-11 09:36:00+05:30
+Test case 457 PASSED: Verified data for 2024-10-11 09:37:00+05:30
+Test case 458 PASSED: Verified data for 2024-10-11 09:38:00+05:30
+Test case 459 PASSED: Verified data for 2024-10-11 09:39:00+05:30
+Test case 460 PASSED: Verified data for 2024-10-11 09:40:00+05:30
+Test case 461 PASSED: Verified data for 2024-10-11 09:41:00+05:30
+Test case 462 PASSED: Verified data for 2024-10-11 09:42:00+05:30
+Test case 463 PASSED: Verified data for 2024-10-11 09:43:00+05:30
+Test case 464 PASSED: Verified data for 2024-10-11 09:44:00+05:30
+Test case 465 PASSED: Verified data for 2024-10-11 09:45:00+05:30
+Test case 466 PASSED: Verified data for 2024-10-11 09:46:00+05:30
+Test case 467 PASSED: Verified data for 2024-10-11 09:47:00+05:30
+Test case 468 PASSED: Verified data for 2024-10-11 09:48:00+05:30
+Test case 469 PASSED: Verified data for 2024-10-11 09:49:00+05:30
+Test case 470 PASSED: Verified data for 2024-10-11 09:50:00+05:30
+Test case 471 PASSED: Verified data for 2024-10-11 09:51:00+05:30
+Test case 472 PASSED: Verified data for 2024-10-11 09:52:00+05:30
+Test case 473 PASSED: Verified data for 2024-10-11 09:53:00+05:30
+Test case 474 PASSED: Verified data for 2024-10-11 09:54:00+05:30
+Test case 475 PASSED: Verified data for 2024-10-11 09:55:00+05:30
+Test case 476 PASSED: Verified data for 2024-10-11 09:56:00+05:30
+Test case 477 PASSED: Verified data for 2024-10-11 09:57:00+05:30
+Test case 478 PASSED: Verified data for 2024-10-11 09:58:00+05:30
+Test case 479 PASSED: Verified data for 2024-10-11 09:59:00+05:30
+Test case 480 PASSED: Verified data for 2024-10-11 10:00:00+05:30
+Test case 481 PASSED: Verified data for 2024-10-11 10:01:00+05:30
+Test case 482 PASSED: Verified data for 2024-10-11 10:02:00+05:30
+Test case 483 PASSED: Verified data for 2024-10-11 10:03:00+05:30
+Test case 484 PASSED: Verified data for 2024-10-11 10:04:00+05:30
+Test case 485 PASSED: Verified data for 2024-10-11 10:05:00+05:30
+Test case 486 PASSED: Verified data for 2024-10-11 10:06:00+05:30
+Test case 487 PASSED: Verified data for 2024-10-11 10:07:00+05:30
+Test case 488 PASSED: Verified data for 2024-10-11 10:08:00+05:30
+Test case 489 PASSED: Verified data for 2024-10-11 10:09:00+05:30
+Test case 490 PASSED: Verified data for 2024-10-11 10:10:00+05:30
+Test case 491 PASSED: Verified data for 2024-10-11 10:11:00+05:30
+Test case 492 PASSED: Verified data for 2024-10-11 10:12:00+05:30
+Test case 493 PASSED: Verified data for 2024-10-11 10:13:00+05:30
+Test case 494 PASSED: Verified data for 2024-10-11 10:14:00+05:30
+Test case 495 PASSED: Verified data for 2024-10-11 10:15:00+05:30
+Test case 496 PASSED: Verified data for 2024-10-11 10:16:00+05:30
+Test case 497 PASSED: Verified data for 2024-10-11 10:17:00+05:30
+Test case 498 PASSED: Verified data for 2024-10-11 10:18:00+05:30
+Test case 499 PASSED: Verified data for 2024-10-11 10:19:00+05:30
+Test case 500 PASSED: Verified data for 2024-10-11 10:20:00+05:30
+PASSED
+Tearing down after tests...
+
+
+================================== FAILURES ===================================
+_____________________ test_signup_and_email_confirmation ______________________
+
+    def test_signup_and_email_confirmation():
+        """Test user signup and email confirmation."""
+        # Step 1: Signup request
+        response = requests.post(f"{BASE_URL}/signup/", json=signup_data)
+>       assert response.status_code == 200
+E       assert 422 == 200
+E        +  where 422 = <Response [422]>.status_code
+
+test\test_main.py:39: AssertionError
+_______________________ test_login_and_protected_route ________________________
+
+    @pytest.mark.asyncio
+    def test_login_and_protected_route():
+        """Test login and accessing a protected route."""
+        login_data = {
+            "email": signup_data["email"],
+            "password": signup_data["password"]
+        }
+    
+        # Step 1: Login request
+        response = requests.post(f"{BASE_URL}/login/", json=login_data)
+>       assert response.status_code == 200
+E       assert 422 == 200
+E        +  where 422 = <Response [422]>.status_code
+
+test\test_main.py:60: AssertionError
+___________________________ test_create_user_table ____________________________
+
+    @pytest.mark.asyncio
+    def test_create_user_table():
+        """Test creating a user-specific table and ensure table is created correctly."""
+        user_id = "12345"
+    
+        # Step 1: Create a table for the user
+        response = requests.post(f"{BASE_URL}/create-table/", json={"user_id": user_id})
+>       assert response.status_code == 200
+E       assert 422 == 200
+E        +  where 422 = <Response [422]>.status_code
+
+test\test_main.py:78: AssertionError
+============================== warnings summary ===============================
+test/test_main.py::test_login_and_protected_route
+  test\test_main.py:50: PytestWarning: The test <Function test_login_and_protected_route> is marked with '@pytest.mark.asyncio' but it is not an async function. Please remove the asyncio mark. If the test is not marked explicitly, check for global marks applied via 'pytestmark'.
+    @pytest.mark.asyncio
+
+test/test_main.py::test_create_user_table
+  test\test_main.py:71: PytestWarning: The test <Function test_create_user_table> is marked with '@pytest.mark.asyncio' but it is not an async function. Please remove the asyncio mark. If the test is not marked explicitly, check for global marks applied via 'pytestmark'.
+    @pytest.mark.asyncio
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED test/test_main.py::test_signup_and_email_confirmation - assert 422 == 200
+FAILED test/test_main.py::test_login_and_protected_route - assert 422 == 200
+FAILED test/test_main.py::test_create_user_table - assert 422 == 200
+=================== 3 failed, 5 passed, 2 warnings in 8.77s ===================

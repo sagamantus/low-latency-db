@@ -256,8 +256,41 @@ async def get_logs(timestamp: str):
     else:
         return data
 
+def send_db_confirmation_email(email: str, db_name:str):
+    sender_email = os.environ["SENDER_EMAIL"]
+    receiver_email = email
+    password = os.environ["PASSWORD"]
+
+    subject = "Database created!"
+    body = f"""We are pleased to inform you that your new database has been successfully created!
+
+Database Name: {db_name} 
+Creation Time: {datetime.now()}
+
+You can now start using your database for your projects. If you have any questions or need assistance, feel free to reach out to our support team at support@quaddb.com.
+
+Thank you for using our services!
+"""
+
+    message = f"Subject: {subject}\n\n{body}"
+
+    em = EmailMessage()
+    em["From"] = sender_email
+    em["To"] = receiver_email
+    em["Subject"] = subject
+    em.set_content(body)
+    
+    context = ssl.create_default_context()
+    
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
+        smtp.login(sender_email, password)
+        smtp.sendmail(sender_email, receiver_email, em.as_string())
+
 @app.post("/create-table/")
 async def create_user_table(user_id: str):
+    await database.connect()
+    async with database.transaction():
+        await database.execute(f"DROP TABLE IF EXISTS {user_id}_financial_data;")
     user_table = Table(
         f"{user_id}_financial_data",
         metadata,
@@ -269,4 +302,5 @@ async def create_user_table(user_id: str):
         Column("volume", Integer),
     )
     metadata.create_all(engine)
+    send_db_confirmation_email('preetam6teen@gmail.com', f'{user_id}_financial_data')
     return {"message": f"Table '{user_id}_financial_data' created successfully!"}
