@@ -35,7 +35,7 @@ datastructure = dict()
 memcached_client = memcache.Client([('127.0.0.1', 11211)])
 
 # Database connection and table definitions
-DATABASE_URL = "postgresql://postgres:postgres@db:5432/mydatabasei"
+DATABASE_URL = "postgresql://postgres:postgres@db:5432/mydatabase"
 database = Database(DATABASE_URL)
 metadata = MetaData()
 
