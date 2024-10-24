@@ -1,15 +1,73 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import { useState } from 'react';
 
 export default function Try() {
+
+    const [created, setCreated] = useState(false); 
+    const [createdName, setCreatedName] = useState(false); 
+
+    const handleCreateInstance = async (event) => {
+        event.preventDefault(); // Prevent the default form submission
+
+
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        let randomName = 'Quaddb_instance_';
+        
+        for (let i = 0; i < 8; i++) {
+        const randomIndex = Math.floor(Math.random() * alphabet.length);
+            randomName += alphabet[randomIndex];
+        }
+        localStorage.setItem("instance", randomName); 
+        console.log(randomName);
+        setCreatedName(randomName); 
+
+        try {
+            const res = await fetch(`http://localhost:8000/create-table/?user_id=${randomName}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            console.log('Response Status:', res.status); // Log the response status
+            console.log('Response Status Text:', res.statusText); // Log the status text
+
+            if (!res.ok) {
+                const errorData = await res.json(); // Try to get error response body
+                throw new Error(`Network response was not ok: ${res.statusText}, ${JSON.stringify(errorData)}`);
+            }
+
+            const data = await res.json();
+            console.log(data)
+            setCreated(true); 
+            // useData(data);
+            // navigate('/home/')
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
   return (
     <div>
         <Navbar className=''></Navbar>
-        <div className='w-screen h-16 flex justify-center items-center rounded-2xl bg-amber-200 text-amber-800'>
-            Create your database instance if not yet created !
-            <div className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-amber-300 items-center text-amber-900 hover:scale-105 hover:bg-amber-400 hover:cursor-pointer mx-20'>Create</div>
-        </div>
+        {
+            !created && (
+                <div className='w-screen h-16 flex justify-center items-center rounded-2xl bg-amber-200 text-amber-800'>
+                    Create your database instance if not yet created !
+                    <div onClick={handleCreateInstance} className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-amber-300 items-center text-amber-900 hover:scale-105 hover:bg-amber-400 hover:cursor-pointer mx-20'>Create</div>
+                </div>
+            )
+        }
+        {
+            created && (
+                <div className='w-screen h-16 flex justify-center items-center rounded-2xl bg-amber-200 text-amber-800'>
+                    `Your database instance is created with with instance name: {createdName}`
+                </div>
+            )
+        }
+        
 
         <div className='w-screen h-[80%] py-[6%] bg-gradient-to-b from-blue-100 to-white flex items-center justify-center space-x-10'>
 

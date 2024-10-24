@@ -3,19 +3,62 @@ import { Bar, Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import Navbar from '../components/Navbar';
 import { FaCalendarAlt, FaChartLine, FaExchangeAlt, FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { customAlphabet } from 'nanoid';
 
 const Fetch = () => {
   const [inputValue, setInputValue] = useState('');
+  const [dataFetched, setDataFetched] = useState(false); 
 
   // Fetched data for display
-  const data = {
+  const [data, useData] = useState({
     date: "2024-10-09 14:30:00+05:30",
     open: 51359.3,
     high: 51399,
     low: 51354.9,
     close: 51395.05,
     volume: 3975
-  };
+  });
+
+  const getData = async (event) => {
+    
+    event.preventDefault(); // Prevent the default form submission
+    let encodedValue = encodeURIComponent(inputValue);
+
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let randomName = 'Quaddb-instance-';
+    
+    for (let i = 0; i < 8; i++) {
+      const randomIndex = Math.floor(Math.random() * alphabet.length);
+      randomName += alphabet[randomIndex];
+    }
+    console.log(randomName);
+
+    try {
+        const res = await fetch(`http://localhost:8000/logs/?timestamp=${encodedValue}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        console.log('Response Status:', res.status); // Log the response status
+        console.log('Response Status Text:', res.statusText); // Log the status text
+
+        if (!res.ok) {
+            const errorData = await res.json(); // Try to get error response body
+            throw new Error(`Network response was not ok: ${res.statusText}, ${JSON.stringify(errorData)}`);
+        }
+
+        const data = await res.json();
+        console.log(data)
+        useData(data);
+        setDataFetched(true);
+        // navigate('/home/')
+    } catch (error) {
+        console.error('Error:', error);
+    }
+
+  }
 
   // Line chart data to show stock trends
   const stockTrendData = {
@@ -151,11 +194,6 @@ const Fetch = () => {
     }
   };
 
-  const handleFetch = () => {
-    // Handle fetching logic here using inputValue
-    console.log("Fetching data for:", inputValue);
-  };
-
   return (
     <div className="bg-gradient-to-r from-gray-50 to-white">
         <Navbar></Navbar>
@@ -166,7 +204,7 @@ const Fetch = () => {
             </a>
         </div>
         <div className='py-4'></div>
-      {/* Input field and Fetch button */}
+        
       <div className="flex items-center mb-4 justify-center">
         <input 
           type="text" 
@@ -176,49 +214,54 @@ const Fetch = () => {
           className="border rounded-lg p-2 mr-2 w-1/2 outline outline-1"
         />
         <button 
-          onClick={handleFetch} 
+          onClick={getData} 
           className="bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-blue-700"
         >
           Fetch
         </button>
       </div>
 
-      {/* Fetched data display */}
-      <div className="bg-gradient-to-r from-blue-100 to-gray-100 p-6 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">Stock Data</h2>
-        <div className="grid grid-cols-2 gap-6">
-          <div className="flex items-center text-lg">
-            <FaCalendarAlt className="mr-2 text-blue-600" /> Date: {data.date}
-          </div>
-          <div className="flex items-center text-lg">
-            <FaArrowUp className="mr-2 text-green-600" /> Open: {data.open}
-          </div>
-          <div className="flex items-center text-lg">
-            <FaChartLine className="mr-2 text-yellow-600" /> High: {data.high}
-          </div>
-          <div className="flex items-center text-lg">
-            <FaArrowDown className="mr-2 text-red-600" /> Low: {data.low}
-          </div>
-          <div className="flex items-center text-lg">
-            <FaExchangeAlt className="mr-2 text-purple-600" /> Close: {data.close}
-          </div>
-          <div className="flex items-center text-lg">
-            <FaChartLine className="mr-2 text-gray-600" /> Volume: {data.volume}
-          </div>
-        </div>
-      </div>
+      {
+        dataFetched && (
+          <div>
+              <div className="bg-gradient-to-r from-blue-100 to-gray-100 p-6 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">Stock Data</h2>
+              <div className="grid-cols-2 gap-6 justify-evenly flex">
+                <div className="flex items-center text-lg">
+                  <FaCalendarAlt className="mr-2 text-blue-600" /> Date: {data.date}
+                </div>
+                <div className="flex items-center text-lg">
+                  <FaArrowUp className="mr-2 text-green-600" /> Open: {data.open}
+                </div>
+                <div className="flex items-center text-lg">
+                  <FaChartLine className="mr-2 text-yellow-600" /> High: {data.high}
+                </div>
+                <div className="flex items-center text-lg">
+                  <FaArrowDown className="mr-2 text-red-600" /> Low: {data.low}
+                </div>
+                <div className="flex items-center text-lg">
+                  <FaExchangeAlt className="mr-2 text-purple-600" /> Close: {data.close}
+                </div>
+                <div className="flex items-center text-lg">
+                  <FaChartLine className="mr-2 text-gray-600" /> Volume: {data.volume}
+                </div>
+              </div>
+            </div>
 
-      {/* Chart for stock trends */}
-      <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">Stock Trend Chart</h2>
-        <Line data={stockTrendData} options={options} />
-      </div>
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">Stock Trend Chart</h2>
+              <Line data={stockTrendData} options={options} />
+            </div>
 
-      {/* Bar chart for database performance */}
-      <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">Database Operations Comparison</h2>
-        <Bar data={performanceData} options={options} />
-      </div>
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">Database Operations Comparison</h2>
+              <Bar data={performanceData} options={options} />
+            </div>
+          </div>
+        )
+      }
+
+      
 
     </div>
   );
