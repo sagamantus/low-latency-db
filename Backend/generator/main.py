@@ -18,6 +18,6 @@ async def send_message():
             await websocket.send(data.to_json())
             await asyncio.sleep(1)    
         
-        await websocket.close
+        await websocket.close()
 
 asyncio.run(send_message())
