@@ -15,6 +15,7 @@ import ssl
 import smtplib
 from fastapi.security import OAuth2PasswordBearer
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
@@ -34,7 +35,7 @@ datastructure = dict()
 memcached_client = memcache.Client([('127.0.0.1', 11211)])
 
 # Database connection and table definitions
-DATABASE_URL = "postgresql://postgres:postgres@db:5432/mydatabase"
+DATABASE_URL = "postgresql://postgres:postgres@db:5432/mydatabasei"
 database = Database(DATABASE_URL)
 metadata = MetaData()
 
@@ -73,6 +74,14 @@ async def lifespan(app: FastAPI):
     await database.disconnect()
 
 app = FastAPI(lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Middleware to log processing time
 @app.middleware("http")
