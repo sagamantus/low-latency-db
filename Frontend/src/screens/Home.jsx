@@ -9,7 +9,9 @@ export default function Home() {
         <Navbar></Navbar>
         <div className='bg-amber-200 h-12 w-screen shadow-2xl flex items-center justify-between px-[25%] text-amber-700'>
             Download our latest version of Quad DB to manage your high frequency tasks!
-            <div className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-amber-300 items-center text-amber-900 hover:scale-105 hover:bg-amber-400 hover:cursor-pointer'>Download</div>
+            <a href="src/assets/quaddb.exe" download>
+                <div className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-amber-300 items-center text-amber-900 hover:scale-105 hover:bg-amber-400 hover:cursor-pointer'>Download</div>
+            </a>
         </div>
 
         <div>
@@ -21,8 +23,9 @@ export default function Home() {
                 <Link to="/try/">
                     <div className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-cyan-700 items-center text-amber-100 hover:scale-105 hover:bg-cyan-800 hover:cursor-pointer'>Try Now</div>
                 </Link>
-                
-                <div className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-amber-300 items-center text-amber-900 hover:scale-105 hover:bg-amber-400 hover:cursor-pointer'>Download</div>
+                <a href="src/assets/quaddb.exe" download>
+                    <div className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-amber-300 items-center text-amber-900 hover:scale-105 hover:bg-amber-400 hover:cursor-pointer'>Download</div>
+                </a>
                 <div className='flex justify-center h-10 w-28 rounded-lg outline outline-1 bg-violet-800 items-center text-amber-100 hover:scale-105 hover:bg-violet-900 hover:cursor-pointer'>Gemini</div>
             </div>
         </div>
@@ -40,7 +43,7 @@ export default function Home() {
                     </div>
                     <div className='p-8'>
                         <div className='mb-2 text-3xl font-extrabold text-gray-700 flex justify-center'>Throughput</div>
-                        <div className='text-gray-500 flex justify-center font-semibold'>2000 per second</div>
+                        <div className='text-gray-500 flex justify-center font-semibold'>5000 per second</div>
                     </div>
                 </div>
                 <div className='flex justify-evenly'>
